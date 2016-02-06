@@ -18,4 +18,4 @@ JSP入门实战项目（javabean+JSP+servlet+mysql）
 开发环境：java1.8+tomcat8+mysql5.x+eclipse for javaee
 
 
-注：详细的设计与实现可以参考我写的这篇博客：http://www.zifangsky.cn/2015/11/java-web入门项目之网络交友的设计与实现/ 
+注：详细的设计与实现可以参考我写的这篇文章：http://www.zifangsky.cn/2015/11/java-web入门项目之网络交友的设计与实现/ 
