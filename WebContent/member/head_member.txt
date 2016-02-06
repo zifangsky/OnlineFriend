@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<center><font size=7><p>网络交友</font></center>
+
+<table cellSpacing="1" cellPadding="1" width="560" align="center" border="0">	
+	<tr valign="bottom">
+		<td><a href="member/uploadImage.jsp"><font size=2>更新头像</font></a><td>
+		<td><a href="member/choiceLookType.jsp"><font size=2>浏览会员</font></a><td>
+		<td><a href="member/modifyRegisterMess.jsp"><font size=2>修改注册信息</font></a><td>
+		<td><a href="member/modifyPassword.jsp"><font size=2>修改密码</font></a><td>
+		<td><a href="helpExitLogin"><font size=2>退出登录</font></a><td>
+		<td><a href="index.jsp"><font size=2>返回主页</font></a><td>
+	</tr>
+</table>
+	
+	
+	
+	
+	
+	
+	

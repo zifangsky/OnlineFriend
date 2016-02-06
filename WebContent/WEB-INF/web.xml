@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+
+<!-- JNDI -->
+<resource-ref>  
+	<description>DBConn</description>  
+    <res-ref-name>jdbc/onlinefriend</res-ref-name>    
+    <res-type>javax.sql.DataSource</res-type>    
+    <res-auth>Container</res-auth>    
+</resource-ref>  
+
+<!-- 权限校验，是否登录，是否有权限执行该操作 -->
+  <servlet>
+    <servlet-name>checkPermission</servlet-name>
+    <servlet-class>com.zifangsky.OnlineFriend.servlet.member.HandleCheckPermission</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>checkPermission</servlet-name>
+    <url-pattern>/helpCheckPermission</url-pattern>
+  </servlet-mapping>
+
+<!-- 成员管理 -->
+
+<!-- 注册 -->
+  <servlet>
+    <servlet-name>register</servlet-name>
+    <servlet-class>com.zifangsky.OnlineFriend.servlet.member.HandleRegister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>register</servlet-name>
+    <url-pattern>/helpRegister</url-pattern>
+  </servlet-mapping>
+<!-- 登录 -->
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>com.zifangsky.OnlineFriend.servlet.member.HandleLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/helpLogin</url-pattern>
+  </servlet-mapping>
+<!-- 验证码绘制 -->
+  <servlet>
+    <servlet-name>drawValidateCode</servlet-name>
+    <servlet-class>com.zifangsky.OnlineFriend.servlet.member.HandleDrawValidateCode</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>drawValidateCode</servlet-name>
+    <url-pattern>/helpDrawValidateCode</url-pattern>
+  </servlet-mapping>  
+<!-- 登录成员信息 -->
+  <servlet>
+    <servlet-name>loginedMember</servlet-name>
+    <servlet-class>com.zifangsky.OnlineFriend.servlet.member.HandleShowLoginedMember</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginedMember</servlet-name>
+    <url-pattern>/helpLoginedMember</url-pattern>
+  </servlet-mapping>
+<!-- 上传图片 -->
+  <servlet>
+    <servlet-name>uploadImage</servlet-name>
+    <servlet-class>com.zifangsky.OnlineFriend.servlet.member.HandleUploadImage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>uploadImage</servlet-name>
+    <url-pattern>/helpUploadImage</url-pattern>
+  </servlet-mapping>
+<!-- 成员信息显示 -->
+  <servlet>
+    <servlet-name>showMember</servlet-name>
+    <servlet-class>com.zifangsky.OnlineFriend.servlet.member.HandleShowMember</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>showMember</servlet-name>
+    <url-pattern>/helpShowMember</url-pattern>
+  </servlet-mapping>
+<!-- 修改密码 -->
+  <servlet>
+    <servlet-name>modifyPassword</servlet-name>
+    <servlet-class>com.zifangsky.OnlineFriend.servlet.member.HandleModifyPassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>modifyPassword</servlet-name>
+    <url-pattern>/helpModifyPassword</url-pattern>
+  </servlet-mapping>
+<!-- 修改注册信息 -->
+  <servlet>
+    <servlet-name>modifyRegisterMess</servlet-name>
+    <servlet-class>com.zifangsky.OnlineFriend.servlet.member.HandleModifyRegisterMess</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>modifyRegisterMess</servlet-name>
+    <url-pattern>/helpModifyRegisterMess</url-pattern>
+  </servlet-mapping>
+<!-- 退出登录 -->
+  <servlet>
+    <servlet-name>exitLogin</servlet-name>
+    <servlet-class>com.zifangsky.OnlineFriend.servlet.member.HandleExit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>exitLogin</servlet-name>
+    <url-pattern>/helpExitLogin</url-pattern>
+  </servlet-mapping>
+  
+<!-- 文章管理 -->
+ 
+ <!-- 文章列表 --> 
+  <servlet>
+	<servlet-name>articleList</servlet-name>
+	<servlet-class>com.zifangsky.OnlineFriend.servlet.article.HandleArticleShowList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>articleList</servlet-name>
+  	<url-pattern>/ArticleShowList</url-pattern>
+  </servlet-mapping>
+  
+ <!-- 单个文章详细信息 --> 
+  <servlet>
+	<servlet-name>articleContent</servlet-name>
+	<servlet-class>com.zifangsky.OnlineFriend.servlet.article.HandleArticleShowContent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>articleContent</servlet-name>
+  	<url-pattern>/ArticleShowContent</url-pattern>
+  </servlet-mapping>  
+  
+<!-- 添加新文章 --> 
+  <servlet>
+	<servlet-name>articleAdd</servlet-name>
+	<servlet-class>com.zifangsky.OnlineFriend.servlet.article.HandleArticleAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>articleAdd</servlet-name>
+  	<url-pattern>/ArticleAdd</url-pattern>
+  </servlet-mapping>  
+  
+<!-- 修改文章 --> 
+  <servlet>
+	<servlet-name>articleModify</servlet-name>
+	<servlet-class>com.zifangsky.OnlineFriend.servlet.article.HandleArticleModify</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>articleModify</servlet-name>
+  	<url-pattern>/ArticleModify</url-pattern>
+  </servlet-mapping> 
+  
+<!-- 删除文章 --> 
+  <servlet>
+	<servlet-name>articleDelete</servlet-name>
+	<servlet-class>com.zifangsky.OnlineFriend.servlet.article.HandleArticleDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>articleDelete</servlet-name>
+  	<url-pattern>/ArticleDelete</url-pattern>
+  </servlet-mapping> 
+  
+</web-app>

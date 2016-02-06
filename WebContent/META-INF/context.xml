@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd">
+<Context>    
+   <Resource name="jdbc/onlinefriend"
+   	 auth="Container"  
+   	 type="javax.sql.DataSource"         
+     driverClassName="com.mysql.jdbc.Driver"    
+     url="jdbc:mysql://127.0.0.1:3306/onlinefriend?useUnicode=true&amp;characterEncoding=utf-8"
+     username="root"  
+     password="root" 
+     maxActive="100"  
+     maxIdle="30"  
+     maxWait="10000"    />    
+ </Context>  

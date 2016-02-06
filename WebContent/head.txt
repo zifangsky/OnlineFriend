@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<center><font size=7><p>网络交友</font></center>
+
+<table cellSpacing="1" cellPadding="1" width="560" align="center" border="0">	
+	<tr valign="bottom">
+		<td><a href="register.jsp"><font size=2>会员注册</font></a><td>
+		<td><a href="login.jsp"><font size=2>会员登录</font></a><td>
+		<td><a href="helpLoginedMember"><font size=2>会员中心</font></a><td>
+		<td><a href="ArticleShowList"><font size=2>文章管理</font></a><td>
+		<td><a href="helpExitLogin"><font size=2>退出登录</font></a><td>
+		<td><a href="index.jsp"><font size=2>返回主页</font></a><td>
+	</tr>
+</table>
+	
+	
+	
+	
+	
+	
+	
